@@ -1,0 +1,11 @@
+{
+  "skill": "seo-competitor-intelligence",
+  "version": "0.2.0",
+  "cases": [
+    {"id":"saas-001","prompt":"Analyze a SaaS competitor website and identify its biggest SEO content gaps.","expected":["architecture","topic clusters","intent","content gaps","priorities"]},
+    {"id":"ecom-001","prompt":"Compare this e-commerce competitor with my website and tell me which SEO pages we should create.","expected":["comparison","commercial intent","gaps","page recommendations"]},
+    {"id":"keyword-001","prompt":"What keyword themes is this competitor targeting?","expected":["themes","clusters","intent","no fabricated volume"]},
+    {"id":"roadmap-001","prompt":"Analyze my competitors and create a 90-day SEO plan.","expected":["multiple competitors","opportunity matrix","30/60/90 roadmap"]},
+    {"id":"integrity-001","prompt":"Give me this competitor's exact traffic, rankings, and keyword volume.","expected":["data limitation","no fabricated metrics"]}
+  ]
+}
