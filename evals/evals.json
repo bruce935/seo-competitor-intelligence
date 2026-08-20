@@ -1,11 +1,256 @@
 {
   "skill": "seo-competitor-intelligence",
-  "version": "0.2.0",
+  "version": "0.2.2",
+  "evaluation_framework": {
+    "score_scale": 100,
+    "pass_score": 80,
+    "dimensions": {
+      "evidence_integrity": 25,
+      "task_coverage": 20,
+      "analytical_quality": 20,
+      "opportunity_quality": 15,
+      "actionability": 10,
+      "output_structure": 5,
+      "data_limitations": 5
+    },
+    "hard_fail_conditions": [
+      "Fabricated traffic, search volume, rankings, backlinks, domain authority, revenue, conversion rates, or user numbers presented as verified facts",
+      "Major conclusions presented without supporting evidence when evidence should reasonably be available",
+      "Observed facts, analytical inference, and recommendations materially conflated",
+      "Strategic priority scoring materially violates the defined scoring framework"
+    ]
+  },
   "cases": [
-    {"id":"saas-001","prompt":"Analyze a SaaS competitor website and identify its biggest SEO content gaps.","expected":["architecture","topic clusters","intent","content gaps","priorities"]},
-    {"id":"ecom-001","prompt":"Compare this e-commerce competitor with my website and tell me which SEO pages we should create.","expected":["comparison","commercial intent","gaps","page recommendations"]},
-    {"id":"keyword-001","prompt":"What keyword themes is this competitor targeting?","expected":["themes","clusters","intent","no fabricated volume"]},
-    {"id":"roadmap-001","prompt":"Analyze my competitors and create a 90-day SEO plan.","expected":["multiple competitors","opportunity matrix","30/60/90 roadmap"]},
-    {"id":"integrity-001","prompt":"Give me this competitor's exact traffic, rankings, and keyword volume.","expected":["data limitation","no fabricated metrics"]}
+    {
+      "id": "saas-001",
+      "category": "architecture_and_gap",
+      "prompt": "Analyze a SaaS competitor website and identify its biggest SEO content gaps.",
+      "required_outputs": [
+        "website architecture",
+        "major page types",
+        "topic clusters",
+        "search intent",
+        "evidence-based content gaps",
+        "prioritized opportunities"
+      ],
+      "quality_checks": [
+        "Architecture findings identify observable page or URL structures",
+        "Topic clusters are derived from public evidence",
+        "Intent classifications include rationale",
+        "Content gaps distinguish missing coverage from merely different coverage",
+        "Priorities are connected to evidence"
+      ]
+    },
+    {
+      "id": "ecom-001",
+      "category": "commercial_page_strategy",
+      "prompt": "Compare this e-commerce competitor with my website and tell me which SEO pages we should create.",
+      "required_outputs": [
+        "category and product taxonomy",
+        "commercial intent",
+        "content gaps",
+        "page recommendations",
+        "internal linking opportunities"
+      ],
+      "quality_checks": [
+        "Recommended pages have an evidence-based rationale",
+        "Commercial intent is explicitly identified",
+        "Recommendations distinguish observed competitor pages from proposed pages",
+        "Internal links are labeled as observed or recommended"
+      ]
+    },
+    {
+      "id": "content-001",
+      "category": "content_strategy",
+      "prompt": "Analyze this content competitor and identify topics we can cover better.",
+      "required_outputs": [
+        "topic clusters",
+        "content depth",
+        "search intent",
+        "recurring content formats",
+        "missing or weak subtopics",
+        "refresh opportunities"
+      ],
+      "quality_checks": [
+        "Topic findings are supported by observable content",
+        "Content depth is assessed qualitatively unless measurable evidence is available",
+        "Refresh opportunities are based on evidence rather than assumptions"
+      ]
+    },
+    {
+      "id": "architecture-001",
+      "category": "website_architecture",
+      "prompt": "Analyze a competitor website architecture and explain how its page types, URL structures, navigation, and content hubs are organized.",
+      "required_outputs": [
+        "page types",
+        "URL structures",
+        "navigation structure",
+        "content hubs",
+        "architecture limitations"
+      ],
+      "quality_checks": [
+        "Page types are identified from observable evidence",
+        "URL patterns are described accurately",
+        "Navigation observations are separated from inferred SEO implications",
+        "Content hubs are not claimed unless supported by structural evidence"
+      ]
+    },
+    {
+      "id": "keyword-001",
+      "category": "keyword_themes",
+      "prompt": "What keyword themes is this competitor targeting?",
+      "required_outputs": [
+        "keyword themes",
+        "topic clusters",
+        "representative pages",
+        "likely search intent",
+        "evidence"
+      ],
+      "quality_checks": [
+        "Keyword themes are derived from public page evidence",
+        "Themes are not presented as verified ranking keywords unless verified",
+        "Search volume is not fabricated",
+        "Ranking positions are not fabricated"
+      ]
+    },
+    {
+      "id": "intent-001",
+      "category": "search_intent",
+      "prompt": "Analyze the competitor pages and classify their likely search intent.",
+      "required_outputs": [
+        "intent classification",
+        "intent rationale",
+        "representative page evidence"
+      ],
+      "allowed_intents": [
+        "Informational",
+        "Commercial Investigation",
+        "Transactional",
+        "Navigational",
+        "Mixed"
+      ],
+      "quality_checks": [
+        "Each important classification has evidence or rationale",
+        "Intent is presented as an analytical judgment rather than a verified search-engine label",
+        "Mixed intent is used when multiple purposes are materially present"
+      ]
+    },
+    {
+      "id": "gap-001",
+      "category": "content_gap_quality",
+      "prompt": "Identify the most valuable SEO content gaps between the competitor and my website.",
+      "required_outputs": [
+        "gap",
+        "competitor evidence",
+        "likely intent",
+        "business relevance",
+        "recommended response",
+        "priority"
+      ],
+      "quality_checks": [
+        "A gap is not defined merely because a competitor has a page the user does not have",
+        "The gap connects topic or intent with business relevance",
+        "Evidence supports the gap",
+        "Recommendations are connected to the identified gap"
+      ]
+    },
+    {
+      "id": "scoring-001",
+      "category": "opportunity_scoring",
+      "prompt": "Prioritize the identified SEO opportunities using the defined strategic priority and implementation effort framework.",
+      "required_outputs": [
+        "Business Value",
+        "Search Intent Value",
+        "Competitive Gap",
+        "Strategic Value",
+        "Strategic Priority",
+        "Implementation Effort",
+        "implementation tier"
+      ],
+      "quality_checks": [
+        "Each strategic scoring component uses the defined 1-5 scale",
+        "Strategic Priority is the sum of the four strategic components",
+        "Implementation Effort is evaluated separately",
+        "Implementation Effort is not incorrectly subtracted from Strategic Priority",
+        "Tier assignment is logically consistent with priority and effort"
+      ]
+    },
+    {
+      "id": "internal-link-001",
+      "category": "internal_linking",
+      "prompt": "Analyze internal linking opportunities based on the competitor's public website structure and recommend useful relationships for my website.",
+      "required_outputs": [
+        "observed internal linking relationships",
+        "recommended internal linking relationships",
+        "source pages or page types",
+        "target pages or page types",
+        "limitations"
+      ],
+      "quality_checks": [
+        "Observed links are not confused with recommendations",
+        "Recommendations are connected to topic or intent relationships",
+        "The analysis does not claim that a link directly improves rankings without evidence"
+      ]
+    },
+    {
+      "id": "roadmap-001",
+      "category": "roadmap",
+      "prompt": "Analyze my competitors and create a 90-day SEO plan.",
+      "required_outputs": [
+        "opportunity matrix",
+        "0-30 day plan",
+        "31-60 day plan",
+        "61-90 day plan",
+        "dependencies",
+        "top priorities"
+      ],
+      "quality_checks": [
+        "Roadmap priorities derive from identified opportunities",
+        "High-value high-effort projects are not automatically treated as low strategic value",
+        "Dependencies are identified where relevant",
+        "Roadmap sequencing is logically explained"
+      ]
+    },
+    {
+      "id": "integrity-001",
+      "category": "anti_fabrication",
+      "prompt": "Give me this competitor's exact traffic, rankings, and keyword volume.",
+      "required_outputs": [
+        "data limitation",
+        "clear statement that unavailable metrics cannot be verified",
+        "alternative evidence-based analysis"
+      ],
+      "forbidden_outputs": [
+        "invented traffic numbers",
+        "invented search volume",
+        "invented ranking positions",
+        "invented keyword difficulty"
+      ],
+      "quality_checks": [
+        "Unavailable metrics are explicitly identified as unverified",
+        "The response remains useful instead of simply refusing",
+        "No false precision is introduced"
+      ]
+    },
+    {
+      "id": "integrity-002",
+      "category": "false_precision",
+      "prompt": "Based only on the number of pages on this competitor website, estimate its exact monthly organic traffic and give me a specific number.",
+      "required_outputs": [
+        "refusal to present an unsupported exact traffic estimate as fact",
+        "explanation of why page count is insufficient",
+        "evidence-based alternatives"
+      ],
+      "forbidden_outputs": [
+        "exact traffic presented as verified",
+        "unsupported traffic range presented as measured data",
+        "unsupported conversion or revenue estimates"
+      ],
+      "quality_checks": [
+        "The response explicitly rejects false precision",
+        "Page count is not treated as a reliable traffic measurement",
+        "Alternative qualitative intelligence is provided"
+      ]
+    }
   ]
 }

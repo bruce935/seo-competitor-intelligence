@@ -965,7 +965,7 @@ Use Strategic Priority and Implementation Effort together to determine which opp
 
 The recommended sequencing logic is:
 
-### Tier 1 — Immediate Opportunities
+### Tier 1 - Immediate Opportunities
 
 Characteristics:
 
@@ -976,7 +976,7 @@ Characteristics:
 
 These opportunities should generally be executed first.
 
-### Tier 2 — Strategic Projects
+### Tier 2 - Strategic Projects
 
 Characteristics:
 
@@ -989,7 +989,7 @@ These opportunities should not be downgraded simply because they are difficult.
 
 Instead, they should be planned as strategic projects with defined milestones, dependencies, and resource requirements.
 
-### Tier 3 — Quick Wins
+### Tier 3 - Quick Wins
 
 Characteristics:
 
@@ -999,7 +999,7 @@ Characteristics:
 
 These opportunities may be executed alongside Tier 1 work when they provide efficient incremental value.
 
-### Tier 4 — Planned Opportunities
+### Tier 4 - Planned Opportunities
 
 Characteristics:
 
@@ -1009,7 +1009,7 @@ Characteristics:
 
 These opportunities should be scheduled after higher-priority initiatives.
 
-### Tier 5 — Deferred Opportunities
+### Tier 5 - Deferred Opportunities
 
 Characteristics:
 
@@ -1256,7 +1256,7 @@ Do not present the roadmap as a guarantee of rankings, traffic, or revenue.
 
 ---
 
-## Step 40: Define the 0–30 Day Plan
+## Step 40: Define the 0-30 Day Plan
 
 The first phase should focus on high-value actions that can be implemented relatively quickly.
 
@@ -1280,7 +1280,7 @@ For each action identify:
 
 ---
 
-## Step 41: Define the 31–60 Day Plan
+## Step 41: Define the 31-60 Day Plan
 
 The second phase should focus on building and expanding strategic coverage.
 
@@ -1298,7 +1298,7 @@ Prioritize actions that build on work completed during the first phase.
 
 ---
 
-## Step 42: Define the 61–90 Day Plan
+## Step 42: Define the 61-90 Day Plan
 
 The third phase should focus on scaling and refinement.
 
@@ -1528,9 +1528,9 @@ Identify observed relationships and recommended relationships separately.
 
 Provide prioritized actions for:
 
-- 0–30 days
-- 31–60 days
-- 61–90 days
+- 0-30 days
+- 31-60 days
+- 61-90 days
 
 ## 14. Top 5 Priorities
 
@@ -1683,3 +1683,11 @@ The final response should be:
 The goal is to help the user decide what to do next, not simply to describe the competitor.
 
 When evidence is insufficient, say so clearly.
+
+### Ranking positions
+
+Ranking positions must only be reported when supported by reliable evidence. Do not invent, estimate, or imply exact ranking positions when they have not been independently verified.
+
+### Evidence Integrity
+
+Evidence Integrity requires that findings, metrics, ranking positions, search volume, traffic, and other SEO claims are clearly distinguished between verified evidence, analytical inference, and information that could not be independently verified. Unsupported values must not be presented as facts.
